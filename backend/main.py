@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from fuel_calculator import calculate_fuel
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="Smart Fuel Assist",
@@ -35,3 +36,10 @@ def fuel_prediction(data: FuelRequest):
             status_code=400,
             detail=str(error)
         )
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://fuelindicator-1.onrender.com"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
