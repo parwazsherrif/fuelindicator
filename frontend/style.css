@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f6fa;
+    color: #222;
+}
+
+header {
+    background: #ffca05;
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header span {
+    font-size: 13px;
+}
+
+.online {
+    color: #176b35;
+    font-size: 13px;
+}
+
+main {
+    max-width: 600px;
+    margin: 25px auto;
+    padding: 15px;
+}
+
+.welcome {
+    margin-bottom: 20px;
+}
+
+.welcome h1 {
+    margin: 10px 0;
+}
+
+.fuel-card,
+.input-card,
+.ride-card {
+    background: white;
+    padding: 22px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px #00000010;
+}
+
+.fuel-card {
+    background: #fff3c4;
+}
+
+.fuel-card h1 {
+    font-size: 42px;
+    margin: 15px 0;
+    color: #805d00;
+}
+
+.progress {
+    height: 12px;
+    background: #ddd;
+    border-radius: 20px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+#fuel-progress {
+    height: 100%;
+    width: 0%;
+    background: #16a34a;
+    transition: width 0.3s;
+}
+
+label {
+    display: block;
+    margin: 15px 0 7px;
+    font-size: 14px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 18px;
+    background: #ffca05;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #efb900;
+}
+
+#result,
+#ride-result {
+    margin-top: 18px;
+    line-height: 1.8;
+}

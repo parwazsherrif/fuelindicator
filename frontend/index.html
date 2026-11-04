@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fuel Assist | Rapido Captain</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>rapido <span>Captain</span></h2>
+        <div class="online">● You're online</div>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <p>Welcome, Captain!</p>
+            <h1>Smart Fuel Assist</h1>
+            <p>Track your fuel. Ride worry-free.</p>
+        </section>
+
+        <section class="fuel-card">
+            <h2>⛽ Fuel Status</h2>
+            <h1 id="range">-- km</h1>
+            <p>Estimated remaining range</p>
+
+            <div class="progress">
+                <div id="fuel-progress"></div>
+            </div>
+
+            <h3 id="fuel-status">Enter your fuel details</h3>
+        </section>
+
+        <section class="input-card">
+            <h2>Fuel Calculator</h2>
+
+            <label>Fuel remaining after last refill (litres)</label>
+            <input type="number" id="fuel" value="2" min="0" step="0.1">
+
+            <label>Distance travelled (km)</label>
+            <input type="number" id="distance" value="20" min="0" step="0.1">
+
+            <label>Bike mileage (km/litre)</label>
+            <input type="number" id="mileage" value="45" min="0.1" step="0.1">
+
+            <button onclick="calculateFuel()">Calculate Fuel</button>
+
+            <div id="result"></div>
+        </section>
+
+        <section class="ride-card">
+            <h2>Ride Protection</h2>
+
+            <label>Upcoming ride distance (km)</label>
+            <input type="number" id="ride-distance" value="15" min="0">
+
+            <button onclick="checkRide()">Check Ride</button>
+
+            <p id="ride-result"></p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
