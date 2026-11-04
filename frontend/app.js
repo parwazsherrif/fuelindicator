@@ -1,4 +1,4 @@
-const API_URL = "https://fuelindicator.onrender.com/";
+const API_URL = "https://fuelindicator.onrender.com/api";
 
 let currentRange = 0;
 
